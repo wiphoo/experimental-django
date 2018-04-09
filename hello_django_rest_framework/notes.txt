@@ -1,0 +1,13 @@
+#	2018/04/10
+
+#	create an working environment
+virtualenv -p python3 venv
+
+# 	activate the virtualenv venv
+source venv/bin/activate
+
+#	install Django via pip installing all dependencies in requirements.txt
+pip install -Ur requirements.txt
+
+#	create django project
+django-admin startproject config .
