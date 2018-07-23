@@ -3,3 +3,11 @@
 
 #	run virtual environment
 source env/bin/activate
+
+#	2018-07-23
+#		create token authenication 
+./manage.py drf_create_token $USER_NAME
+
+#		testing the token based authenication
+curl -X GET http://127.0.0.1:8000/users/ -H 'Authorization: Token $MY_TOKEN' -H 'Accept: application/json; indent=4'
+
